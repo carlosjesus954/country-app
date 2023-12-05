@@ -1,0 +1,18 @@
+.global{
+  padding: 1rem;
+  ul{
+    padding: 0;
+    list-style: none;
+  }
+  li{
+    padding: 1rem;
+    cursor: pointer;
+  }
+}
+h2{
+  margin: 0;
+}
+.active{
+  background-color: blue;
+  color: white;
+}
