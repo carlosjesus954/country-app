@@ -1,0 +1,15 @@
+.capital {
+  background-color: #264653;
+  //   padding: 1rem;
+  height: 100vh;
+  &__h2 {
+    margin: 0;
+    padding: 1rem;
+    color: #f0f0f0;
+  }
+  &__container {
+    padding: 1rem;
+  }
+  &__subcontainer {
+  }
+}

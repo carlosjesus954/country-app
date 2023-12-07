@@ -13,11 +13,7 @@
   <div class="capital__container">
     <div class="capital__subcontainer">
       <!-- Tabla de resultados -->
-      <ul>
-        <li *ngFor="let country of countries">
-          {{ country.capital }} - {{ country.population }}
-        </li>
-      </ul>
+      <app-country-table [countries]="countries"></app-country-table>
     </div>
   </div>
 </div>

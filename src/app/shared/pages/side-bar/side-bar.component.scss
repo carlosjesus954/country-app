@@ -1,18 +1,24 @@
-.global{
-  padding: 1rem;
-  ul{
+.global {
+  // padding: 1rem;
+  background-color: #2a9d8f;
+  height: 100vh;
+
+  ul {
     padding: 0;
     list-style: none;
   }
-  li{
+  li {
     padding: 1rem;
     cursor: pointer;
+    font-weight: bold;
   }
 }
-h2{
+h2 {
   margin: 0;
+  padding: 1rem;
+  color: #f0f0f0;
 }
-.active{
-  background-color: blue;
-  color: white;
+.active {
+  background-color: #e9c46a;
+  color: #f0f0f0;
 }
