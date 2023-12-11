@@ -1,0 +1,15 @@
+.warning {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  width: 10rem;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.table {
+  &__img {
+    width: 2.1875rem;
+  }
+}

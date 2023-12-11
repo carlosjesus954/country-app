@@ -1,5 +1,5 @@
-<div *ngIf="countries.length === 0; else table" class="warning">
-  No hay paises!
+<div *ngIf="capitals.length === 0; else table" class="warning">
+  No hay capitales!
 </div>
 <ng-template #table>
   <table class="table">
@@ -15,19 +15,19 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let country of countries; let i = index">
+      <tr *ngFor="let capital of capitals; let i = index">
         <td>{{ i + 1 }}</td>
-        <td>{{ country.flag }}</td>
+        <td>{{ capital.flag }}</td>
         <td>
           <img
-            [src]="country.flags.svg"
-            [alt]="country.name.common"
+            [src]="capital.flags.svg"
+            [alt]="capital.name.common"
             class="table__img"
           />
         </td>
-        <td>{{ country.capital }}</td>
-        <td>{{ country.name.common }}</td>
-        <td>{{ country.population }}</td>
+        <td>{{ capital.capital }}</td>
+        <td>{{ capital.name.common }}</td>
+        <td>{{ capital.population }}</td>
         <td>
           <a href="#">Ver más</a>
         </td>
