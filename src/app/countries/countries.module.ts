@@ -8,6 +8,7 @@ import { CountriesRoutingModule } from './countries-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { CountryTableComponent } from './components/country-table/country-table.component';
 import { CapitalTableComponent } from './components/capital-table/capital-table.component';
+import { RegionTableComponent } from './components/region-table/region-table.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CapitalTableComponent } from './components/capital-table/capital-table.
     CountryPageComponent,
     CountryTableComponent,
     CapitalTableComponent,
+    RegionTableComponent,
   ],
   imports: [CommonModule, CountriesRoutingModule,SharedModule],
 })

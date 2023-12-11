@@ -22,11 +22,17 @@ export class countryService{
         return this.http.get<Country[]>(`${this.apiUrl}/name/${term}`)
         .pipe(
             // Lo que hace es coger el error y con el of([]) nos devuelve el observable de country vacio
-            tap(countries => console.log(countries)),
+            // tap(countries => console.log(countries)),
             catchError( error => of([]))
         )
     }
-    // searchRegion(term : string) : Observable<Country[]> {}
+    searchRegion(term : string) : Observable<Country[]> {
+        return this.http.get<Country[]>(`${this.apiUrl}/region/${term}`)
+        .pipe(
+            // Lo que hace es coger el error y con el of([]) nos devuelve el observable de country vacio
+            catchError( error => of([]))
+        )
+    }
 
     
 }
