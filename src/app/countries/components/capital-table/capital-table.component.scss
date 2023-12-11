@@ -7,9 +7,20 @@
   padding: 0.5rem;
   border-radius: 1rem;
 }
-
 .table {
   &__img {
     width: 2.1875rem;
+  }
+  &__thead {
+  }
+  &__tr {
+  }
+  &__th {
+    text-align: center;
+  }
+  &__tbody {
+  }
+  &__td {
+    text-align: center;
   }
 }

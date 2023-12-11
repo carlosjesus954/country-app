@@ -3,32 +3,32 @@
 </div>
 <ng-template #table>
   <table class="table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Icon</th>
-        <th>Bandera</th>
-        <th>Nombre</th>
-        <th>Capital</th>
-        <th>Población</th>
+    <thead class="table__thead">
+      <tr class="table__tr">
+        <th class="table__th">#</th>
+        <th class="table__th">Icon</th>
+        <th class="table__th">Bandera</th>
+        <th class="table__th">Nombre</th>
+        <th class="table__th">Capital</th>
+        <th class="table__th">Población</th>
         <th></th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let capital of capitals; let i = index">
-        <td>{{ i + 1 }}</td>
-        <td>{{ capital.flag }}</td>
-        <td>
+    <tbody class="table__tbody">
+      <tr *ngFor="let capital of capitals; let i = index" class="table__tr">
+        <td class="table__td">{{ i + 1 }}</td>
+        <td class="table__td">{{ capital.flag }}</td>
+        <td class="table__td">
           <img
             [src]="capital.flags.svg"
             [alt]="capital.name.common"
             class="table__img"
           />
         </td>
-        <td>{{ capital.name.common }}</td>
-        <td>{{ capital.capital }}</td>
-        <td>{{ capital.population }}</td>
-        <td>
+        <td class="table__td">{{ capital.name.common }}</td>
+        <td class="table__td">{{ capital.capital }}</td>
+        <td class="table__td">{{ capital.population }}</td>
+        <td class="table__td">
           <a href="#">Ver más</a>
         </td>
       </tr>

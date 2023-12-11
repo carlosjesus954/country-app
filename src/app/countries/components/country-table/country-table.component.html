@@ -3,32 +3,32 @@
 </div>
 <ng-template #table>
   <table class="table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Icon</th>
-        <th>Bandera</th>
-        <th>Capital</th>
-        <th>Nombre</th>
-        <th>Población</th>
+    <thead class="table__thead">
+      <tr class="table__tr">
+        <th class="table__th">#</th>
+        <th class="table__th">Icon</th>
+        <th class="table__th">Bandera</th>
+        <th class="table__th">Capital</th>
+        <th class="table__th">Nombre</th>
+        <th class="table__th">Población</th>
         <th></th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let country of countries; let i = index">
-        <td>{{ i + 1 }}</td>
-        <td>{{ country.flag }}</td>
-        <td>
+    <tbody class="table__tbody">
+      <tr *ngFor="let country of countries; let i = index" class="table__tr">
+        <td class="table__td">{{ i + 1 }}</td>
+        <td class="table__td">{{ country.flag }}</td>
+        <td class="table__td">
           <img
             [src]="country.flags.svg"
             [alt]="country.name.common"
             class="table__img"
           />
         </td>
-        <td>{{ country.capital }}</td>
-        <td>{{ country.name.common }}</td>
-        <td>{{ country.population }}</td>
-        <td>
+        <td class="table__td">{{ country.capital }}</td>
+        <td class="table__td">{{ country.name.common }}</td>
+        <td class="table__td">{{ country.population }}</td>
+        <td class="table__td">
           <a href="#">Ver más</a>
         </td>
       </tr>
