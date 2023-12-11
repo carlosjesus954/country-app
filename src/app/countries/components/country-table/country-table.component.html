@@ -2,7 +2,7 @@
   No hay capitales!
 </div>
 <ng-template #table>
-  <table>
+  <table class="table">
     <thead>
       <tr>
         <th>#</th>
@@ -19,7 +19,11 @@
         <td>{{ i + 1 }}</td>
         <td>{{ country.flag }}</td>
         <td>
-          <img [src]="country.flags.svg" [alt]="country.name.common" />
+          <img
+            [src]="country.flags.svg"
+            [alt]="country.name.common"
+            class="table__img"
+          />
         </td>
         <td>{{ country.capital }}</td>
         <td>{{ country.name.common }}</td>
