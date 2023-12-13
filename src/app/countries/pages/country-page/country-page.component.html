@@ -1,1 +1,51 @@
-<p>country-page works!</p>
+<ng-template #loading>
+  <div class="alert">Espere por favor...</div>
+</ng-template>
+<div *ngIf="country; else loading" class="country">
+  <div *ngFor="let c of country" class="country__global">
+    <h2 class="country__h2">
+      Pais: <span>{{ c?.name?.common }}</span>
+    </h2>
+    <div class="country__content">
+      <div class="country__boxImg">
+        <h3 class="country__h3">Bandera</h3>
+        <img [src]="c.flags.svg" [alt]="c?.name?.common" class="country__img" />
+      </div>
+      <div class="country__info">
+        <h3 class="country__h3">Información</h3>
+        <ul class="country__ul">
+          <li>
+            <span class="country__info--span">Poblacion:</span>
+            {{ c.population | number }}
+          </li>
+          <li><span class="country__info--span">Código:</span> {{ c.cca3 }}</li>
+        </ul>
+      </div>
+      <div class="country__traductions">
+        <div class="country__traductions--subcontainer">
+          <h3 class="country__h3">Traducciones</h3>
+          <div class="country__translate">
+            <span class="country__translate--span">{{
+              c.translations["ara"].common
+            }}</span>
+            <span class="country__translate--span">{{
+              c.translations["bre"].common
+            }}</span>
+            <span class="country__translate--span">{{
+              c.translations["ces"].common
+            }}</span>
+            <span class="country__translate--span">{{
+              c.translations["cym"].common
+            }}</span>
+            <span class="country__translate--span">{{
+              c.translations["deu"].common
+            }}</span>
+            <span class="country__translate--span">{{
+              c.translations["kor"].common
+            }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
