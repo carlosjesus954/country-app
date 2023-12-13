@@ -29,7 +29,7 @@
         <td class="table__td">{{ capital.capital }}</td>
         <td class="table__td">{{ capital.population }}</td>
         <td class="table__td">
-          <a href="#">Ver más</a>
+          <a [routerLink]="['/countries/by', capital.cca3]">Info</a>
         </td>
       </tr>
     </tbody>
