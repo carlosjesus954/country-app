@@ -1,17 +1,21 @@
-<div class="capital">
-  <h2 class="capital__h2">Por region</h2>
+<div class="region">
+  <h2 class="region__h2">Por region</h2>
 
-  <div class="capital__container">
-    <div class="capital__subcontainer">
+  <div class="region__container">
+    <div class="region__subcontainer">
       <!-- SearchBox -->
-      <app-search-box
-        (onValue)="searchByRegion($event)"
-        placeHolder="Buscar por region"
-      ></app-search-box>
+      <button
+        *ngFor="let r of regions"
+        class="region__btns"
+        [ngClass]="{ region__activate: selectedRegion === r }"
+        (click)="searchByRegion(r)"
+      >
+        {{ r }}
+      </button>
     </div>
   </div>
-  <div class="capital__container">
-    <div class="capital__subcontainer">
+  <div class="region__container">
+    <div class="region__subcontainer">
       <!-- Tabla de resultados -->
       <app-country-table [countries]="countries"></app-country-table>
     </div>

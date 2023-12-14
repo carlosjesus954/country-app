@@ -1,7 +1,7 @@
 <input
   type="text"
-  #txtSearchInput
-  (keyup)="realizarBusqueda(txtSearchInput.value)"
+  (keyup)="onKeyPress(txtSearchInput.value)"
   [placeholder]="placeHolder"
+  #txtSearchInput
 />
 <!--  (input)="realizarBusqueda(txtSearchInput.value)" -->
