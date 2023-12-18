@@ -5,7 +5,8 @@
     <div class="country__subcontainer">
       <!-- SearchBox -->
       <app-search-box
-        (onValue)="searchByCountry($event)"
+        (onDebounce)="searchByCountry($event)"
+        [initialValue]="initialValue"
         placeHolder="Buscar por país"
       ></app-search-box>
     </div>
