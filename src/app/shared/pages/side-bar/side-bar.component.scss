@@ -1,11 +1,16 @@
+// @import "../../../../styles.scss";
 .global {
   // padding: 1rem;
   background-color: #2a9d8f;
   height: 100vh;
+  // @include telefonoM {
+  //   height: auto;
+  // }
 
   ul {
     padding: 0;
     list-style: none;
+    margin: 0;
   }
   li {
     padding: 1rem;
